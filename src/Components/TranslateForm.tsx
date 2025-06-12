@@ -22,7 +22,7 @@ function TranslateForm({ onTranslate, isLoading = false, onToggleHistory }: Prop
     return (
         <div className="translate-form-container">
             <div className="top-bar">
-                <h2>Traduction</h2>
+                <h2>Traduction FR → ESP </h2>
                 <button
                     className="history-link"
                     onClick={onToggleHistory} // Use the new prop
