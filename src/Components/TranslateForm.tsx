@@ -3,10 +3,11 @@ import { useState } from 'react';
 // Interface pour les props
 interface Props {
     onTranslate: (text: string) => void;
-    isLoading?: boolean; // Optionnel pour désactiver le bouton pendant le chargement
+    isLoading?: boolean;
+    onToggleHistory?: () => void; // New prop to toggle history
 }
 
-function TranslateForm({ onTranslate, isLoading = false }: Props) {
+function TranslateForm({ onTranslate, isLoading = false, onToggleHistory }: Props) {
     const [text, setText] = useState<string>('');
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -22,7 +23,11 @@ function TranslateForm({ onTranslate, isLoading = false }: Props) {
         <div className="translate-form-container">
             <div className="top-bar">
                 <h2>Traduction</h2>
-                <button className="history-link" onClick={() => alert('Fonctionnalité en cours de développement')}>
+                <button
+                    className="history-link"
+                    onClick={onToggleHistory} // Use the new prop
+                    disabled={isLoading}
+                >
                     Voir l'historique
                 </button>
             </div>
