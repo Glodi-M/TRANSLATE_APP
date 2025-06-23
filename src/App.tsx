@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import TranslateForm from './Components/TranslateForm';
 import TranslateResult from './Components/TranslateResult';
 import History from './Components/History';
+import Footer from './Components/Footer';
 
 interface TranslateResponse {
   responseData: {
@@ -82,6 +83,7 @@ function App() {
           />
         )}
       </main>
+      <Footer />
     </div>
   );
 }

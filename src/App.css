@@ -260,6 +260,23 @@ textarea:focus {
     font-size: 0.95rem;
 }
 
+
+/* footer */
+
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    background-color: var(--primary-light);
+    border-top: 1px solid var(--border);
+}
+span{
+    color: var(--primary);
+    font-weight: 600;
+}
+    
+
 /* Animations */
 @keyframes fadeIn {
     from {
